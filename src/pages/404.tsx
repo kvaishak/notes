@@ -1,18 +1,17 @@
-import Layout from "@components/Layout";
-import Feed from "@containers/Feed";
-import CONFIG from "../../notes.config";
-import { NextPageWithLayout } from "./_app";
-import { TPosts, TTags } from "../types";
-import CustomError from "../containers/CustomError";
+import Layout from "@components/Layout"
+import CONFIG from "../../site.config"
+import { NextPageWithLayout } from "./_app"
+import { TPosts, TTags } from "../types"
+import CustomError from "../containers/CustomError"
 
 type Props = {
-  tags: TTags;
-  posts: TPosts;
-};
+  tags: TTags
+  posts: TPosts
+}
 
 const NotFoundPage: NextPageWithLayout<Props> = () => {
-  return <CustomError />;
-};
+  return <CustomError />
+}
 
 NotFoundPage.getLayout = function getlayout(page) {
   return (
@@ -26,7 +25,7 @@ NotFoundPage.getLayout = function getlayout(page) {
     >
       {page}
     </Layout>
-  );
-};
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage

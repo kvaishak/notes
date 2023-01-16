@@ -1,13 +1,13 @@
-import CONFIG from "@/notes.config";
-import Tag from '@components/Tag'
-import { TPost } from '@/src/types'
-import { formatDate } from '@/src/libs/utils'
-import Image from 'next/image'
-import React from 'react'
+import CONFIG from "@/site.config"
+import Tag from "@components/Tag"
+import { TPost } from "@/src/types"
+import { formatDate } from "@/src/libs/utils"
+import Image from "next/image"
+import React from "react"
 
 type Props = {
-  data: TPost;
-};
+  data: TPost
+}
 
 const PostHeader: React.FC<Props> = ({ data }) => {
   return (
@@ -15,7 +15,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
       <h1 className="font-bold text-3xl text-black dark:text-white">
         {data.title}
       </h1>
-      {data.type[0] !== 'Page' && (
+      {data.type[0] !== "Page" && (
         <nav className="mt-6 text-gray-500 dark:text-gray-400">
           <div className="flex items-center gap-3 mb-3">
             {data.author && data.author[0] && data.author[0].name && (
@@ -62,7 +62,7 @@ const PostHeader: React.FC<Props> = ({ data }) => {
         </nav>
       )}
     </>
-  );
-};
+  )
+}
 
-export default PostHeader;
+export default PostHeader

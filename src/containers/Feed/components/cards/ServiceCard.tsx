@@ -1,9 +1,9 @@
-import CONFIG from "notes.config";
-import React from "react";
-import { AiFillCodeSandboxCircle } from "react-icons/ai";
+import CONFIG from "site.config"
+import React from "react"
+import { AiFillCodeSandboxCircle } from "react-icons/ai"
 
 const ServiceCard: React.FC = () => {
-  if (!CONFIG.projects) return null;
+  if (!CONFIG.projects) return null
   return (
     <>
       <div className="p-1 mb-3 dark:text-white">🌟 Sites</div>
@@ -19,7 +19,7 @@ const ServiceCard: React.FC = () => {
         </a>
       </ul>
     </>
-  );
-};
+  )
+}
 
-export default ServiceCard;
+export default ServiceCard
