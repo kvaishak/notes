@@ -1,26 +1,26 @@
-import { useEffect, useRef, useState } from 'react'
-import Link from 'next/link'
-import CONFIG from "notes.config"
-import NavBar from './NavBar'
-import { getTheme } from '../../Theme'
+import { useEffect, useRef, useState } from "react"
+import Link from "next/link"
+import CONFIG from "site.config"
+import NavBar from "./NavBar"
+import { getTheme } from "../../Theme"
 
 const Header = ({ fullWidth }) => {
   const navRef = useRef(null)
   const [theme, setTheme] = useState()
 
   useEffect(() => {
-    if (typeof window === 'object') {
+    if (typeof window === "object") {
       setTheme(getTheme())
     }
-  }, []);
+  }, [])
 
   const handleClick = () => {
-    const changedTheme = getTheme() !== 'dark' ? 'dark' : 'light'
-    localStorage.setItem('theme', changedTheme)
+    const changedTheme = getTheme() !== "dark" ? "dark" : "light"
+    localStorage.setItem("theme", changedTheme)
     setTheme(changedTheme)
-    changedTheme === 'dark'
-      ? document.documentElement.classList.add('dark')
-      : document.documentElement.classList.remove('dark')
+    changedTheme === "dark"
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark")
   }
 
   return (
@@ -52,7 +52,7 @@ const Header = ({ fullWidth }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

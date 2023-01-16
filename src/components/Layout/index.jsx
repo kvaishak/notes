@@ -1,15 +1,15 @@
-import Header from "./Header";
-import CONFIG from "notes.config";
-import Head from "next/head";
-import PropTypes from "prop-types";
+import Header from "./Header"
+import CONFIG from "site.config"
+import Head from "next/head"
+import PropTypes from "prop-types"
 
 const Layout = ({ children, fullWidth, ...customMeta }) => {
-  const url = CONFIG.link;
+  const url = CONFIG.link
   const meta = {
     title: CONFIG.blog.title,
     type: "website",
     ...customMeta,
-  };
+  }
   return (
     <div>
       <Head>
@@ -64,11 +64,11 @@ const Layout = ({ children, fullWidth, ...customMeta }) => {
         </main>
       </div>
     </div>
-  );
-};
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node,
-};
+}
 
-export default Layout;
+export default Layout
